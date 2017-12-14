@@ -1,15 +1,21 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
-import {ActiveThreadInputComponent} from './active-thread-input/active-thread-input.component';
 import {SideBarComponent} from './side-bar/side-bar.component';
+import { MessageComponent } from './message/message.component';
+import {InputComponent} from './active-thread-input/input.component';
+import { ThreadComponent } from './thread/thread.component';
+import {Message} from './message/message';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ActiveThreadInputComponent,
-    SideBarComponent
+    InputComponent,
+    SideBarComponent,
+    MessageComponent,
+    ThreadComponent
   ],
+  router: [],
   imports: [
     BrowserModule
   ],

@@ -43,7 +43,6 @@ describe('MessagesService', () => {
     service.postMessage(message1);
     service.postMessage(message2);
     expect(service.getAllmessages().length).toEqual(2);
-
   });
 
 
