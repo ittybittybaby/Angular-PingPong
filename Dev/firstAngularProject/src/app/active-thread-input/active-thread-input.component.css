@@ -1,0 +1,32 @@
+#reply-form {
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  margin-left: 25%;
+  /*background: #3859c2;*/
+  background: linear-gradient(transparent, #3859c2);
+
+}
+
+#submitButton {
+  position: relative;
+
+  left: 90%;
+  top: 50%;
+}
+
+#form8 {
+  /*padding-bottom: 0;*/
+  padding: 0;
+}
+
+#labelMessage {
+  margin-bottom: 0;
+  color: lightcyan;
+}
+
+.button {
+  position: relative;
+  left: 90%;
+  top: 50%;
+}

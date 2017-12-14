@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+
+
+
+/*#chatInput {*/
+  /*padding: 1%;*/
+  /*margin-left: 25.4%;*/
+  /*position: fixed;*/
+  /*bottom: 0;*/
+  /*background: yellow;*/
+  /*height: 10vh;*/
+/*}*/
+
+/*#chatInput textarea {*/
+  /*width: 90%;*/
+  /*text-align: center;*/
+/*}*/
+
+#messages {
+  background: grey;
+  float: right;
+  height: 75vh;
+  margin-top: 2vh;
+  margin-right: 10vh;
+  box-shadow: 5px 10px darkgray;
+  overflow: auto;
+}
+
+/*.btn {*/
+  /*padding: 0;*/
+  /*height: 50px;*/
+/*}*/
+
+/*.btn #post {*/
+  /*alignment: right;*/
+  /*vertical-align: center;*/
+/*}*/
+
