@@ -45,5 +45,11 @@ describe('MessagesService', () => {
     expect(service.getAllmessages().length).toEqual(2);
   });
 
+  it('return the last message posted', () => {
+    service.postMessage(message1);
+    service.postMessage(message2);
+    expect(service.getLastMessage()).toEqual(message2);
+  })
+
 
 });

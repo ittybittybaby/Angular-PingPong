@@ -30,3 +30,9 @@
   left: 90%;
   top: 50%;
 }
+
+/*.md-textarea {*/
+  /*resize: none;*/
+  /*column-count: 5;*/
+  /*row-span: 1;*/
+/*}*/

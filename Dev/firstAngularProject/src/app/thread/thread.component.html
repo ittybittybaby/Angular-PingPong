@@ -1,4 +1,16 @@
 <div id="messages" class="col-md-9 col-sm-8">
-  <app-message></app-message>
+  <app-message [message]="postMessage"></app-message>
+  <div *ngFor="let message of messages"
+      [class.selected] = "message === postMessage"
+      (click) = selectMessage(message)>
+    <div class="card mdb-color lighten-2 text-center z-depth-2">
+      <div class="card-body">
+        <p  class="white-text mb-0">{{message.content}}</p>
+      </div>
+    </div>
+    <div id="bottom"></div>
+  </div>
 
 </div>
+
+

@@ -8,15 +8,12 @@
 <div id="reply-form" class="col-10">
   <div class="row">
     <div class="col-sm-8 col-md-11 ">
-      <div  class="text">
+      <div class="md-form form-sm">
+        <!--<button type="input" id="submitButton" class="btn btn-primary waves-light" (click)="onClick(message)"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>-->
+        <textarea type="text"  id="form8" #message class="md-textarea" (keyup.enter)="createMessage(message)" placeholder="Type something, ya' bish"></textarea>
+        <!--<input type="text" id="form1" class="md-text">-->
+      </div>
 
-        <!--<button type="button" id="submitButton" class="btn btn-default btn-sm" (click)="onClick()">-->
-          <!--<i class="glyphicon glyphicon-send" href="">Send</i>-->
-      </div>
-      <div class="md-form">
-        <button type="input" id="submitButton" class="btn btn-primary waves-light"  (click)="onClick()">Submit</button>
-        <textarea type="text" id="form8" class="md-textarea" placeholder="Type something, ya' bitch boy" ></textarea>
-      </div>
     </div>
   </div>
 </div>

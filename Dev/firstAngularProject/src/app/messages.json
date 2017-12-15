@@ -1,0 +1,19 @@
+import { Message } from './message/message';
+
+export var storage: Message[] = [
+  {
+    "messageId": 900,
+    "userId": 9001,
+    "content": "This is a message."
+  },
+  {
+    "messageId": 901,
+    "userId": 9001,
+    "content": "This is another message."
+  },
+  {
+    "messageId": 902,
+    "userId": 9001,
+    "content": "This is a message."
+  }
+]

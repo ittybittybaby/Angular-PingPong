@@ -5,7 +5,7 @@ import {SideBarComponent} from './side-bar/side-bar.component';
 import { MessageComponent } from './message/message.component';
 import {InputComponent} from './active-thread-input/input.component';
 import { ThreadComponent } from './thread/thread.component';
-import {Message} from './message/message';
+import {MessagesService} from './message/messages.service';
 
 @NgModule({
   declarations: [
@@ -15,11 +15,10 @@ import {Message} from './message/message';
     MessageComponent,
     ThreadComponent
   ],
-  router: [],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [MessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

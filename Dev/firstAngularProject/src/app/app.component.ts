@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {Message} from './message/message';
+import {Subscription} from 'rxjs/Subscription';
+import {MessagesService} from './message/messages.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +10,11 @@ import {Message} from './message/message';
 })
 
 export class AppComponent {
-  constructor() {}
+
+  // message: any;
+  // subscription: Subscription;
+
+  constructor() {
+    // this.subscription = this.messageService.getMessage().subscribe(message => this.message = message)
+  }
 }

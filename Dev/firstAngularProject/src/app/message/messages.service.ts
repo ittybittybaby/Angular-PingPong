@@ -1,47 +1,76 @@
 import { Injectable } from '@angular/core';
 import { Message } from './message';
+import {mockMessages} from './mockMessages';
+import {Observable} from 'rxjs/Observable';
+import {of} from 'rxjs/observable/of';
 
 @Injectable()
 export class MessagesService {
 
-  lastId: number = 0;
+  message: Message;
 
-  messages: Message[] = [];
-
-  constructor() {}
-
-  postMessage(message: Message): MessagesService {
-    if (!message.messageId) {
-      message.messageId = ++this.lastId;
-    }
-    this.messages.push(message);
-    return this;
+  postMessage(input: string) {
+    this.message = new Message(1, input);
+    this.sendToDB(this.message);
   }
 
-  deleteMessageById(id: number): MessagesService {
-    this.messages = this.messages
-      .filter(message => message.messageId !== id);
-    console.log(this.messages);
-    return this;
+  sendToDB(message: Message): void {
+    console.log(message);
+    mockMessages.push(message);
+    console.log(mockMessages.length);
   }
 
-  updateMessageById(messageId: number, content: string): Message {
-    let message = this.getmessageById(messageId);
-    if (!message) {
-      return null;
-    }
-    message.content = content;
-    return message;
+  getMessageFromDB(): Observable<Message[]>{
+    return of (mockMessages)
   }
 
-  getAllmessages(): Message[] {
-    return this.messages;
-  }
+  //lastId: number = 0;
 
-  getmessageById(id: number): Message {
-    return this.messages
-      .filter(message => message.messageId === id)
-      .pop();
-  }
+  // messages: Message[] = [];
+
+
+  // getLastMessage() {
+  //   if(this.messages.length != 0) {
+  //
+  //     return this.messages[this.messages.length - 1];
+  //   }
+  //   else {
+  //     return null;
+  //   }
+  // }
+  //
+  // postMessage(message: Message): MessagesService {
+  //   if (!message.messageId) {
+  //     message.messageId = ++this.lastId;
+  //   }
+  //   this.messages.push(message);
+  //   return this;
+  // }
+  //
+  // deleteMessageById(id: number): MessagesService {
+  //   this.messages = this.messages
+  //     .filter(message => message.messageId !== id);
+  //   console.log(this.messages);
+  //   return this;
+  // }
+  //
+  // updateMessageById(messageId: number, content: string): Message {
+  //   let message = this.getmessageById(messageId);
+  //   if (!message) {
+  //     return null;
+  //   }
+  //   message.content = content;
+  //   return message;
+  // }
+  //
+  // getAllmessages(): Message[] {
+  //   return this.messages;
+  // }
+  //
+  // getmessageById(id: number): Message {
+  //   return this.messages
+  //     .filter(message => message.messageId === id)
+  //     .pop();
+  // }
 
 }
